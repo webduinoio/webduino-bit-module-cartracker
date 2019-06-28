@@ -29,8 +29,6 @@ Blockly.Blocks['cartracker_irsensor'] = {
         .appendField(new Blockly.FieldVariable("cartracker"), "name_")
         .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_LEFT, "感測器腳位  L")
         .appendField(new Blockly.FieldDropdown(Code.getPinDropdown), "ir_left_")
-        .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_CENTER, " C")
-        .appendField(new Blockly.FieldDropdown(Code.getPinDropdown), "ir_center_")
         .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_RIGHT, " R")
         .appendField(new Blockly.FieldDropdown(Code.getPinDropdown), "ir_right_");
     this.setPreviousStatement(true, null);
@@ -69,14 +67,10 @@ Blockly.Blocks['cartracker_track'] = {
         .appendField(new Blockly.FieldVariable("cartracker"), "name_")
         .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_INDUCTION, "循跡偵測訊號為")
         .appendField(new Blockly.FieldDropdown([
-          ["○○○","\"000\""], 
-          ["○○●","\"001\""], 
-          ["○●○","\"010\""],
-          ["○●●","\"011\""],
-          ["●○○","\"100\""],
-          ["●○●","\"101\""],
-          ["●●○","\"110\""],
-          ["●●●","\"111\""],
+          ["○○","\"000\""], 
+          ["○●","\"001\""], 
+          ["●○","\"100\""],
+          ["●●","\"101\""],
         ]), "status_")
         .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_MOTION, "時，動作")
         .appendField(new Blockly.FieldDropdown([
@@ -107,14 +101,10 @@ Blockly.Blocks['cartracker_track_do'] = {
         .appendField(new Blockly.FieldVariable("cartracker"), "name_")
         .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_INDUCTION, "循跡偵測訊號為")
         .appendField(new Blockly.FieldDropdown([
-          ["○○○","\"000\""], 
-          ["○○●","\"001\""], 
-          ["○●○","\"010\""],
-          ["○●●","\"011\""],
-          ["●○○","\"100\""],
-          ["●○●","\"101\""],
-          ["●●○","\"110\""],
-          ["●●●","\"111\""],
+          ["○○","\"000\""], 
+          ["○●","\"001\""], 
+          ["●○","\"100\""],
+          ["●●","\"101\""],
         ]), "status_")
         .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_MOTION, "時，動作")
         .appendField(new Blockly.FieldDropdown([

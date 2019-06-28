@@ -4,16 +4,17 @@ Blockly.JavaScript['cartracker_motor'] = function (block) {
   var dropdown_mrb_ = block.getFieldValue('mrb_');
   var dropdown_mlf_ = block.getFieldValue('mlf_');
   var dropdown_mlb_= block.getFieldValue('mlb_');
-  var code = variable_name_ + '= getCarTracker(board, '+ dropdown_mrf_ + ', ' + dropdown_mrb_ + ', ' + dropdown_mlf_ + ', ' + dropdown_mlb_ +');\n';
+  var code = variable_name_ + '= getCarTracker(board, bitGPIO('+ dropdown_mrf_ + '), bitGPIO(' + dropdown_mrb_ + '), bitGPIO(' + dropdown_mlf_ + '), bitGPIO(' + dropdown_mlb_ +'));\n';
   return code;
 };
 
 Blockly.JavaScript['cartracker_irsensor'] = function (block) {
   var variable_name_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name_'), Blockly.Variables.NAME_TYPE);
-  var dropdown_mlf_ = block.getFieldValue('ir_left_');
-  var dropdown_mlb_= block.getFieldValue('ir_center_');
-  var dropdown_mrf_ = block.getFieldValue('ir_right_');
-  var code = variable_name_ + '.setTrackPin(' + dropdown_mlf_ + ', ' + dropdown_mlb_ + ', ' +  dropdown_mrf_ + ');\n';
+  var dropdown_ir_l_ = block.getFieldValue('ir_left_');
+//  var dropdown_mlb_ = block.getFieldValue('ir_center_');
+  var dropdown_ir_c_ = 0;
+  var dropdown_ir_r_ = block.getFieldValue('ir_right_');
+  var code = variable_name_ + '.setTrackPin(bitGPIO(' + dropdown_ir_l_ + '), ' + dropdown_ir_c_ + ', bitGPIO(' + dropdown_ir_r_ + '));\n';
   return code;
 };
 
