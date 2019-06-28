@@ -1,0 +1,24 @@
+<category id="catCarTracker" tags="smart" index="2">
+      <block type="cartracker_motor">
+        <field name="mrf_">2</field>
+        <field name="mrb_">16</field>
+        <field name="mlf_">5</field>
+        <field name="mlb_">14</field>
+      </block>
+      <block type="cartracker_irsensor">
+        <field name="ir_left_">3</field>
+        <field name="ir_center_">12</field>
+        <field name="ir_right_">13</field>
+      </block>
+      <block type="cartracker_speed">
+        <value name="speed_">
+          <block type="math_number">
+            <field name="NUM">70</field>
+          </block>
+        </value>
+      </block>
+      <block type="cartracker_track"></block>
+      <block type="cartracker_track_do"></block>
+      <block type="cartracker_on"></block>
+      <block type="cartracker_off"></block>
+</category>

@@ -1,0 +1,19 @@
+{
+  "name": "webduino-bit-module-cartracker",
+  "version": "1.0.0",
+  "description": "CarTracker Module for Webduino Bit",
+  "main": "CarTracker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "cartracker"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

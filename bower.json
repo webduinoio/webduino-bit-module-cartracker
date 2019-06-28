@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-CarTracker",
+  "description": "CarTracker Module for Webduino",
+  "main": "CarTracker.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "cartracker"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

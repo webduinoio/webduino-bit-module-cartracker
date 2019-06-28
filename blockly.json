@@ -1,0 +1,15 @@
+{
+  "types": ["cartracker_motor", "cartracker_irsensor","cartracker_speed", "cartracker_track", "cartracker_track_do", "cartracker_on", "cartracker_off"],
+  "category": "catMenu5",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "CarTracker.js",
+    "CarTracker-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}
