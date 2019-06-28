@@ -1,11 +1,11 @@
-# webduino-module-cartracker
+# webduino-bit-module-cartracker
 
-Webduino Module for CarTracker.
+Webduino Bit Module for CarTracker.
 
 ## Installation
 
 ```shell
-bower install https://github.com/webduinoio/webduino-module-cartracker.git
+bower install https://github.com/webduinoio/webduino-bit-module-cartracker.git
 ```
 
 ## License
