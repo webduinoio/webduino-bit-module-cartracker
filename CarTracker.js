@@ -37,7 +37,6 @@
         }
       });
 
-    console.log("Car init.");
     this._board.send([0xF0, 0x04, SENSOR_CARTRACKER, 0x00, mlf, mlb, mrf, mrb, 0xF7]);
   }
 
@@ -48,7 +47,6 @@
   });
 
   proto.setTrackPin = function(left, center, right){
-    console.log("Tracker init.");
     var cmd = [0xF0, 0x04, SENSOR_CARTRACKER, 0x01, left, center, right, 0xF7];
     this._board.send(cmd);
   }
