@@ -130,6 +130,33 @@ Blockly.Blocks['cartracker_track_do'] = {
   }
 };
 
+Blockly.Blocks['cartracker_action'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("cartracker"), "name_")
+        .appendField(Blockly.Msg.WEBDUINO_CARTRACKER_ACTION, "動作")
+        .appendField(new Blockly.FieldDropdown([
+          [Blockly.Msg.WEBDUINO_CARTRACKER_FORWARD,"1"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_BACK,"4"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_LEFT_FORWARD,"7"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_RIGHT_FORWARD,"8"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_LEFT_BACK,"9"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_RIGHT_BACK,"10"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_TURN_RIGHT,"3"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_TURN_LEFT,"2"], 
+          [Blockly.Msg.WEBDUINO_CARTRACKER_TURN_RIGHT_SLOWLY, "6"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_TURN_LEFT_SLOWLY, "5"],
+          [Blockly.Msg.WEBDUINO_CARTRACKER_STOP,"0"]
+      ]), "direction_");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(195);
+    this.setTooltip("");
+    this.setHelpUrl(mainUrl + 'basic/index.html' + utmUrl); 
+  }
+};
+
+
 Blockly.Blocks['cartracker_on'] = {
   init: function() {
     this.appendDummyInput()

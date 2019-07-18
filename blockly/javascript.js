@@ -44,6 +44,14 @@ Blockly.JavaScript['cartracker_track_do'] = function (block) {
   return code;
 };
 
+Blockly.JavaScript['cartracker_action'] = function (block) {
+  var variable_name_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name_'), Blockly.Variables.NAME_TYPE);
+  var dropdown_direction_ = block.getFieldValue('direction_');
+
+  var code = variable_name_ + '.action(' + dropdown_direction_ + ');\n';
+  return code;
+};
+
 Blockly.JavaScript['cartracker_on'] = function(block) {
   var variable_name_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name_'), Blockly.Variables.NAME_TYPE);
   var code = variable_name_ + '.on();\n';

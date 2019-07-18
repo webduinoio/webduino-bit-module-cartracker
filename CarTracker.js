@@ -36,6 +36,8 @@
           // console.log("carTracker response:",msg);
         }
       });
+
+    console.log("Car init.");
     this._board.send([0xF0, 0x04, SENSOR_CARTRACKER, 0x00, mlf, mlb, mrf, mrb, 0xF7]);
   }
 
@@ -46,6 +48,7 @@
   });
 
   proto.setTrackPin = function(left, center, right){
+    console.log("Tracker init.");
     var cmd = [0xF0, 0x04, SENSOR_CARTRACKER, 0x01, left, center, right, 0xF7];
     this._board.send(cmd);
   }
@@ -85,6 +88,14 @@
     this._callback[status] = callback;
   }
 
+  proto.action = function(direction, callback){
+    var statusInt = parseInt(status, 2);
+    var cmd = [0xF0, 0x04, SENSOR_CARTRACKER, 0x06, direction, 0xF7];
+    this._board.send(cmd);
+    if(typeof(callback) != 'function') return;
+    CARTRACKEREvent.push(status);
+    this._callback[status] = callback;
+  }
 
   proto.on = function(){
     var cmd = [0xF0, 0x04, SENSOR_CARTRACKER, 0x04, 0xF7];

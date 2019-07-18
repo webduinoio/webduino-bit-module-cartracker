@@ -1,5 +1,5 @@
 {
-  "types": ["cartracker_motor", "cartracker_irsensor","cartracker_speed", "cartracker_track", "cartracker_track_do", "cartracker_on", "cartracker_off"],
+  "types": ["cartracker_motor", "cartracker_irsensor","cartracker_speed", "cartracker_track", "cartracker_track_do","cartracker_action" , "cartracker_on", "cartracker_off"],
   "category": "catMenu5",
   "scripts": [
     "blockly/blocks.js",

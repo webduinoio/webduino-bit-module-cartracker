@@ -15,6 +15,7 @@ Blockly.Msg.WEBDUINO_CARTRACKER_PERCENT = "%";
 Blockly.Msg.WEBDUINO_CARTRACKER_WHEN = "When";
 Blockly.Msg.WEBDUINO_CARTRACKER_INDUCTION = "detected tracking signal is";
 Blockly.Msg.WEBDUINO_CARTRACKER_MOTION = ", execute to ";
+Blockly.Msg.WEBDUINO_CARTRACKER_ACTION = "Execute"; 
 Blockly.Msg.WEBDUINO_CARTRACKER_DO = "Do";
 Blockly.Msg.WEBDUINO_CARTRACKER_ON = "start tracking";
 Blockly.Msg.WEBDUINO_CARTRACKER_OFF = "stop tracking";
